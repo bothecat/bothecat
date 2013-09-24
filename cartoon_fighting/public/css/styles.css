@@ -1,0 +1,234 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    font-family: 'Happy Monkey';
+    color: #fff;
+    text-decoration: none;
+    font-size: 100%;
+}
+
+h1, h2 {
+    font-family: 'Happy Monkey';
+    color: #fff;
+}
+
+.features {
+    font-family: 'Amarante';
+    color: #cccccc;
+}
+
+.features_health {
+    font-family: 'Amarante';
+    color: #cccccc;
+    margin: 0;
+    padding: 0;
+}
+
+a:hover {
+    color: #cccccc;
+}
+
+.container {
+    background: #000;
+    overflow: auto;
+    width: 100%;
+}
+
+.right {
+    width: 20%;
+    height: 1000px;
+    background: #660066;
+    overflow: auto;
+    float: left;
+}
+
+.game_menu {
+    width: 200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.left {
+    width: 80%;
+    height: 1000px;
+    overflow: auto;
+    float: left
+}
+
+.index {
+    background: #0000cc;
+}
+
+.newgame {
+    background: #330033
+}
+
+.game {
+    background: #333333
+}
+
+.records {
+    background: #ff0099;
+}
+
+.help {
+    background: #00cc99;
+}
+
+.fighter {
+    width: 160px;
+    height: 200px;
+    overflow: auto;
+    margin: 20px 5px;
+    float: left;
+}
+
+.image:hover {
+    border: 1px solid #00ff33;
+}
+
+.fighter_select {
+    width: 80%;
+    height: 300px;
+    margin: 0 auto;
+    overflow: hidden;
+    text-align: center;
+}
+
+.fighter .image {
+    width: 99%;
+    height: 150px;
+    overflow: hidden;
+}
+
+.fighter .image a img {
+    width: 100%;
+}
+
+.fighter .name {
+    width: 100%;
+    overflow: auto;
+}
+
+.fighter .name p {
+    color: #999999;
+    font-family: 'Amarante';
+}
+
+.selected_fighter {
+    width: 80%;
+    margin: 20px auto;
+    overflow: auto;
+}
+
+.player_1 {
+    width: 40%;
+    overflow: auto;
+    float: left;
+}
+
+.selected_fighter_menu {
+    width: 20%;
+    overflow: auto;
+    float: left;
+    text-align: center;
+}
+
+.player_2 {
+    width: 40%;
+    overflow: auto;
+    float: left;
+    text-align: right;
+}
+
+.lsfighter {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    float: left;
+}
+
+.player_1 .info {
+    width: 150px;
+    float: left;
+    margin-left: 10px;
+    text-align: left;
+}
+
+.lfighter_name, .rfighter_name {
+    color: #cccccc;
+    font-family: 'Amarante';
+    margin: 0;
+}
+
+.rsfighter {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    float: right;
+}
+
+.player_2 .info {
+    width: 150px;
+    float: right;
+    margin-right: 10px;
+    text-align: right;
+}
+
+.lsfighter img, .rsfighter img {
+    width: 100%;
+}
+
+.fight_history {
+    width: 80%;
+    height: 400px;
+    overflow-y: auto;
+    border: 1px solid #cccccc;
+    margin: 20px auto;
+}
+
+#p1_id, #p2_id {
+    display: none;
+}
+
+#game_start_preloader {
+    background: url('http://bothecat/cartoon_fighting/public/images/preload.gif') no-repeat center top;
+    width: 90px;
+    height: 90px;
+    margin: 20px auto;
+    display: none;
+}
+
+#game_begins_block {
+    display: none;
+    width: 90px;
+    overflow: auto;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#game_begins_block p {
+    margin: 0;
+    font-family: 'Amarante';
+    color: #fff;
+}
+
+.controller {
+    width: 80%;
+    height: 100px;
+    overflow-y: auto;
+    margin: 0 auto; 
+}
+
+.ctrl_btn {
+    width: 300px;
+    height: 50px;
+}
