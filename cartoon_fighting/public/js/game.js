@@ -1,34 +1,82 @@
-//setInterval(name, 7000);
+setInterval(name, 7000);
 
 function name() {
-    var damage = $("#p2_damage span").html();
+    var damage = parseFloat($("#p2_damage span").html());
+    var opponent_health = parseFloat($("#p2_health span").html());
     var attack = Math.floor(Math.random() * 2) + 1;
-    var power = $("#p2_power span").html();
-    var opponent_health = $("#p1_health span").html();
-    if(attack == 2) {
-        opponent_health = (opponent_health - damage);
+    if(attack === 2) {
+        opponent_health = (opponent_health - damage) - 50;
         $("#p1_health span").html(opponent_health);
+        if($("#p1_health span").html() < 0) {
+            $("#p1_health span").html(0);
+            $.ajax({
+                type: 'POST',
+                url: 'http://bothecat/cartoon_fighting/game/winnerSet',
+                data: {
+                    winner : 'computer'
+                },
+                success: success
+            });
+            function success() {
+                window.location.replace("http://bothecat/cartoon_fighting/game/gameOver");
+            }    
+        }
     } else {
-        opponent_health = (opponent_health - damage);
+        opponent_health = (opponent_health - damage) - 40;
         $("#p1_health span").html(opponent_health);
+        if($("#p1_health span").html() < 0) {
+            $("#p1_health span").html(0);
+            $.ajax({
+                type: 'POST',
+                url: 'http://bothecat/cartoon_fighting/game/winnerSet',
+                data: {
+                    winner : 'computer'
+                },
+                success: function() {
+                    window.location.replace("http://bothecat/cartoon_fighting/game/gameOver");
+                }  
+            });
+            
+        }
     }
-    //alert(damage);
 }
 
 function punch() {
-    var damage = $("#p1_damage span").html();
-    var power = $("#p1_power span").html();
-    var opponent_health = $("#p2_health span").html();
-    
-    opponent_health = (opponent_health - damage);
+    var damage = parseFloat($("#p1_damage span").html());
+    var opponent_health = parseFloat($("#p2_health span").html());
+    opponent_health = (opponent_health - damage) - 10;
     $("#p2_health span").html(opponent_health);
+    if($("#p2_health span").html() < 0) {
+        $("#p2_health span").html(0);
+        $.ajax({
+            type: 'POST',
+            url: 'http://bothecat/cartoon_fighting/game/winnerSet',
+            data: {
+                winner : 'player'
+            },
+            success: function() {
+                window.location.replace("http://bothecat/cartoon_fighting/game/gameOver");
+            }  
+        }); 
+    }
 }
 
 function kick() {
-    var damage = $("#p1_damage span").html();
-    var power = $("#p1_power span").html();
-    var opponent_health = $("#p2_health span").html();
-    
-    opponent_health = (opponent_health - damage);
+    var damage = parseFloat($("#p1_damage span").html());
+    var opponent_health = parseFloat($("#p2_health span").html());
+    opponent_health = (opponent_health - damage) - 50;
     $("#p2_health span").html(opponent_health);
+    if($("#p2_health span").html() < 0) {
+        $("#p2_health span").html(0);
+        $.ajax({
+            type: 'POST',
+            url: 'http://bothecat/cartoon_fighting/game/winnerSet',
+            data: {
+                winner : 'player'
+            },
+            success: function() {
+                window.location.replace("http://bothecat/cartoon_fighting/game/gameOver");
+            }  
+        });
+    }
 }

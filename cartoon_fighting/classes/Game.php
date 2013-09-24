@@ -56,4 +56,33 @@ class Game {
         exit;
     }
     
+    public function winnerSet() {
+        if(isset($_POST['winner'])):
+            switch($_POST['winner']):
+                case 'player':
+                    $this->winner = 1;
+                    break;
+                case 'computer':
+                    $this->winner = 2;
+                    break;
+            endswitch;
+            Session::set('winner', $this->winner);
+        else:
+            header('Location: ' . APP);
+            exit;
+        endif;
+        echo 'name';
+    }
+    
+    public function gameOver() {
+        if(Session::get('winner') != null):
+            if(Session::get('winner') === 1) echo 'You are win!';
+            else echo 'You are lose';
+            Session::destroy();
+        else:
+            header('Location: ' . APP);
+            exit;
+        endif;
+    }
+    
 }
