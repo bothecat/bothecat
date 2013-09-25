@@ -3,7 +3,7 @@
 class GuestBook {
     
     public function __construct() {
-        echo 'Guest Book';
+        View::view('guestbook');
     }
     
 }
