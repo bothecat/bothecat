@@ -1,0 +1,56 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+p, h1, h2 {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 500px;
+    overflow: auto;
+    margin: 0 auto;
+    border: 1px solid #333333;
+}
+
+.temp {
+    width: 100%;
+    float: left;
+    overflow: auto;
+}
+
+.header {
+    text-align: center;
+    border-bottom: 1px solid #333;
+}
+
+.header h1 {
+    font-family: Tahoma;
+    font-weight: normal;
+}
+
+.result_block {
+    border-bottom: 1px solid #333;
+}
+
+.control_panel h2 {
+    color: #000;
+    font-family: Arial;
+}
+
+.form {
+    width: 234px;
+    margin: 5px;
+}
+
+.controls {
+    text-align: center;
+    font-family: Arial;
+    font-size: 80%;
+}
+
+.equals {
+    width: 100%;
+}
